@@ -16,8 +16,9 @@ syn match skullNumberBinary "0o\o\+"
 syn match skullFloat "\-\?\d\+\.\d\+"
 syn keyword skullInfinity Infinity
 syn match skullEscape "\\[\\trn]"
+syn match skullHexEscape "\\x\x\x"
 syn match skullRune "'.'"
-syn region skullString start="\"" contains=skullEscape end="\""
+syn region skullString start="\"" contains=skullEscape,skullHexEscape end="\""
 
 hi link skullComment Comment
 hi link skullConditional Conditional
@@ -35,3 +36,4 @@ hi link skullInfinity Number
 hi link skullString String
 hi link skullRune String
 hi link skullEscape Special
+hi link skullHexEscape Special
