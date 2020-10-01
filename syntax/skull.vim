@@ -15,8 +15,8 @@ syn match skullNumberOctal "0b[01]\+"
 syn match skullNumberBinary "0o\o\+"
 syn match skullFloat "\-\?\d\+\.\d\+"
 syn keyword skullInfinity Infinity
-syn match skullEscape "\\[\\trn]"
-syn match skullHexEscape "\\x\x\x"
+syn match skullEscape "\\[\\trn]" contained
+syn match skullHexEscape "\\x\x\x" contained
 syn match skullRune "'.'"
 syn region skullString start="\"" contains=skullEscape,skullHexEscape end="\""
 
