@@ -17,7 +17,7 @@ syn match skullFloat "\-\?\d\+\.\d\+"
 syn keyword skullInfinity Infinity
 syn match skullEscape "\\[\\trn]" contained
 syn match skullHexEscape "\\x\x\x" contained
-syn match skullRune "'.'"
+syn match skullRune "'\(.\|\\x\x\x\|\\[\\rtn]\)'" contains=skullEscape,skullHexEscape
 syn region skullString start="\"" contains=skullEscape,skullHexEscape end="\""
 
 hi link skullComment Comment
