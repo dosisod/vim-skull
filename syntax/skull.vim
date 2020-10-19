@@ -6,7 +6,6 @@ syn match skullComment "#\(\ .*\)\?$"
 syn keyword skullConditional if
 syn keyword skullConstant true false
 syn keyword skullStatement return
-syn keyword skullInclude import from
 syn keyword skullType int float rune str bool type
 syn keyword skullModifier mut
 syn match skullNumber "\-\?\d"
@@ -25,7 +24,6 @@ hi link skullComment Comment
 hi link skullConditional Conditional
 hi link skullConstant Number
 hi link skullStatement Statement
-hi link skullInclude Include
 hi link skullType Type
 hi link skullModifier PreCondit
 hi link skullNumber Number
