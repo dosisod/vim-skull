@@ -19,6 +19,7 @@ syn match skullEscape "\\[\\trn]" contained
 syn match skullHexEscape "\\x\x\x" contained
 syn match skullRune "'\(.\|\\x\x\x\|\\[\\rtn]\)'" contains=skullEscape,skullHexEscape
 syn region skullString start="\"" contains=skullEscape,skullHexEscape end="\""
+syn keyword skullStorageSpecifier external
 
 hi link skullComment Comment
 hi link skullConditional Conditional
@@ -37,3 +38,4 @@ hi link skullString String
 hi link skullRune String
 hi link skullEscape Special
 hi link skullHexEscape Special
+hi link skullStorageSpecifier StorageClass
