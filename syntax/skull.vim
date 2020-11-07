@@ -8,11 +8,11 @@ syn keyword skullConstant true false
 syn keyword skullStatement return
 syn keyword skullType int float rune str bool type
 syn keyword skullModifier mut
-syn match skullNumber "\-\?\d"
-syn match skullNumberHex "0x\x\+"
-syn match skullNumberOctal "0b[01]\+"
-syn match skullNumberBinary "0o\o\+"
-syn match skullFloat "\-\?\d\+\.\d\+"
+syn match skullNumber "\<\-\?\d\+\>"
+syn match skullNumberHex "\<0x\x\+\>"
+syn match skullNumberOctal "\<0b[01]\+\>"
+syn match skullNumberBinary "\<0o\o\+\>"
+syn match skullFloat "\<\-\?\d\+\.\d\+\>"
 syn keyword skullInfinity Infinity
 syn match skullEscape "\\[\\trn]" contained
 syn match skullHexEscape "\\x\x\x" contained
