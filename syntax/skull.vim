@@ -3,6 +3,7 @@ if exists("b:current_syntax")
 endif
 
 syn match skullComment "#\(\ .*\)\?$"
+syn match skullBlockComment "#{\_.*#}"
 syn keyword skullConditional if
 syn keyword skullConstant true false
 syn keyword skullStatement return
@@ -21,6 +22,7 @@ syn region skullString start="\"" contains=skullEscape,skullHexEscape end="\""
 syn keyword skullStorageSpecifier external
 
 hi link skullComment Comment
+hi link skullBlockComment Comment
 hi link skullConditional Conditional
 hi link skullConstant Number
 hi link skullStatement Statement
