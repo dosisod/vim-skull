@@ -19,7 +19,7 @@ syn match skullEscape "\\[\\etrn0]" contained
 syn match skullHexEscape "\\x\x\x" contained
 syn match skullRune "'\(.\|\\x\x\x\|\\[\\ertn0]\)'" contains=skullEscape,skullHexEscape
 syn region skullString start="\"" contains=skullEscape,skullHexEscape end="\""
-syn keyword skullStorageSpecifier external
+syn keyword skullStorageSpecifier external export
 
 hi link skullComment Comment
 hi link skullBlockComment Comment
