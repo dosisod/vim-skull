@@ -18,8 +18,9 @@ syn match skullFloat "\<\-\?\d\+\.\d\+\>"
 syn keyword skullInfinity Infinity
 syn match skullEscape "\\[\\etrn0]" contained
 syn match skullHexEscape "\\x\x\x" contained
-syn match skullRune "'\(.\|\\x\x\x\|\\[\\ertn0]\)'" contains=skullEscape,skullHexEscape
-syn region skullString start="\"" contains=skullEscape,skullHexEscape end="\""
+syn match skullQuoteEscape "\(\\\"\|\\\'\)" contained
+syn match skullRune "'\(\\'\|\\\"\|.\|\\x\x\x\|\\[\\ertn0]\)'" contains=skullEscape,skullHexEscape,skullQuoteEscape
+syn match skullString "\".*\"" contains=skullEscape,skullHexEscape,skullQuoteEscape
 syn keyword skullStorageSpecifier external export
 
 hi link skullComment Comment
@@ -40,4 +41,5 @@ hi link skullString String
 hi link skullRune String
 hi link skullEscape Special
 hi link skullHexEscape Special
+hi link skullQuoteEscape Special
 hi link skullStorageSpecifier StorageClass
