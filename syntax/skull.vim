@@ -5,7 +5,7 @@ endif
 syn match skullComment "#\(\ .*\)\?$"
 syn match skullBlockComment "#{\_.*#}"
 syn keyword skullConditional if elif else while
-syn keyword skullBoolOperator not is and
+syn keyword skullBoolOperator not is and or xor
 syn keyword skullConstant true false
 syn keyword skullStatement return
 syn keyword skullType int float rune str bool type
