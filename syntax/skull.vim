@@ -6,6 +6,7 @@ syn match skullComment "#\(\ .*\)\?$"
 syn match skullBlockComment "#{\_.*#}"
 syn keyword skullConditional if elif else while
 syn keyword skullBoolOperator not is and or xor
+syn keyword skullOperator mod
 syn keyword skullConstant true false
 syn keyword skullStatement return
 syn keyword skullType int float rune str bool type
@@ -27,6 +28,7 @@ hi link skullComment Comment
 hi link skullBlockComment Comment
 hi link skullConditional Conditional
 hi link skullBoolOperator Conditional
+hi link skullOperator Conditional
 hi link skullConstant Number
 hi link skullStatement Statement
 hi link skullType Type
