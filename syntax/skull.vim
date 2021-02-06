@@ -9,7 +9,7 @@ syn keyword skullBoolOperator not is isnt and or xor
 syn keyword skullOperator mod
 syn keyword skullConstant true false
 syn keyword skullStatement return
-syn keyword skullType int float rune str bool type
+syn keyword skullType int float rune str bool
 syn keyword skullModifier mut
 syn match skullNumber "\<\-\?\d\+\>"
 syn match skullNumberHex "\<0x\x\+\>"
@@ -21,7 +21,7 @@ syn match skullEscape "\\[\\etrn0]" contained
 syn match skullHexEscape "\\x\x\x" contained
 syn match skullQuoteEscape "\(\\\"\|\\\'\)" contained
 syn match skullRune "'\(\\'\|\\\"\|.\|\\x\x\x\|\\[\\ertn0]\)'" contains=skullEscape,skullHexEscape,skullQuoteEscape
-syn match skullString "\".*\"" contains=skullEscape,skullHexEscape,skullQuoteEscape
+syn region skullString start=+"+ end=+"+ contains=skullEscape,skullHexEscape,skullQuoteEscape
 syn keyword skullStorageSpecifier external export
 
 hi link skullComment Comment
