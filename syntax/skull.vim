@@ -3,7 +3,7 @@ if exists("b:current_syntax")
 endif
 
 syn match skullComment "#\(\ .*\)\?$"
-syn match skullBlockComment "#{\_.*#}"
+syn region skullBlockComment start="#{" end="#}"
 syn keyword skullConditional if elif else while
 syn keyword skullBoolOperator not is isnt and or xor
 syn keyword skullOperator mod
