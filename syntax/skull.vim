@@ -2,8 +2,9 @@ if exists("b:current_syntax")
   finish
 endif
 
-syn match skullComment "#\(\ .*\)\?$"
-syn region skullBlockComment start="#{" end="#}"
+syn match skullComment "#\(\ .*\)\?$" contains=skullTodo
+syn region skullBlockComment start="#{" end="#}" contains=skullTodo
+syn match skullTodo "\(TODO\|FIXME\|HACK\|XXX\)\((.*)\)\?" contained
 syn keyword skullConditional if elif else while
 syn keyword skullBoolOperator not is isnt and or xor
 syn keyword skullOperator mod
@@ -26,6 +27,7 @@ syn keyword skullStorageSpecifier external export
 
 hi link skullComment Comment
 hi link skullBlockComment Comment
+hi link skullTodo Todo
 hi link skullConditional Conditional
 hi link skullBoolOperator Conditional
 hi link skullOperator Conditional
