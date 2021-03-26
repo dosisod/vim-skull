@@ -12,11 +12,11 @@ syn keyword skullConstant true false
 syn keyword skullStatement return unreachable
 syn keyword skullType Int Float Rune Str Bool
 syn keyword skullModifier mut
-syn match skullNumber "\<\-\?\d\+\>"
-syn match skullNumberHex "\<0x\x\+\>"
-syn match skullNumberOctal "\<0b[01]\+\>"
-syn match skullNumberBinary "\<0o\o\+\>"
-syn match skullFloat "\<\-\?\d\+\.\d\+\>"
+syn match skullNumber "\<\([0-9]_\?\)*[0-9]\>"
+syn match skullNumberHex "\<0x\([0-9A-Fa-f]_\?\)*[0-9A-Fa-f]\>"
+syn match skullNumberBinary "\<0b\([01]_\?\)*[01]\>"
+syn match skullNumberOctal "\<0o\([0-7]_\?\)*[0-7]\>"
+syn match skullFloat "\<\([0-7]_\?\)*[0-7]\.\d\+\>"
 syn keyword skullInfinity Infinity
 syn match skullEscape "\\[\\etrn0]" contained
 syn match skullHexEscape "\\x\x\x" contained
