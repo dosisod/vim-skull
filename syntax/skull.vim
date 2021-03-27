@@ -2,9 +2,9 @@ if exists("b:current_syntax")
   finish
 endif
 
-syn match skullComment "#\(\ .*\)\?$" contains=skullTodo
+syn match skullComment "\v#( .*)?$" contains=skullTodo
 syn region skullBlockComment start="#{" end="#}" contains=skullTodo
-syn match skullTodo "\(TODO\|FIXME\|HACK\|XXX\)\((.*)\)\?" contained
+syn match skullTodo "\v(TODO|FIXME|HACK|XXX)((.*))?" contained
 syn keyword skullConditional if elif else while
 syn keyword skullBoolOperator not is isnt and or xor
 syn keyword skullOperator mod
@@ -12,16 +12,16 @@ syn keyword skullConstant true false
 syn keyword skullStatement return unreachable
 syn keyword skullType Int Float Rune Str Bool
 syn keyword skullModifier mut
-syn match skullNumber "\<\([0-9]_\?\)*[0-9]\>"
-syn match skullNumberHex "\<0x\([0-9A-Fa-f]_\?\)*[0-9A-Fa-f]\>"
-syn match skullNumberBinary "\<0b\([01]_\?\)*[01]\>"
-syn match skullNumberOctal "\<0o\([0-7]_\?\)*[0-7]\>"
+syn match skullNumber "\v<([0-9]_?)*[0-9]>"
+syn match skullNumberHex "\v<0x([0-9A-Fa-f]_?)*[0-9A-Fa-f]>"
+syn match skullNumberBinary "\v<0b([01]_?)*[01]>"
+syn match skullNumberOctal "\v<0o([0-7]_?)*[0-7]>"
 syn match skullFloat "\<\([0-7]_\?\)*[0-7]\.\d\+\>"
 syn keyword skullInfinity Infinity
-syn match skullEscape "\\[\\etrn0]" contained
+syn match skullEscape "\v\\[\\etrn0]" contained
 syn match skullHexEscape "\\x\x\x" contained
-syn match skullQuoteEscape "\(\\\"\|\\\'\)" contained
-syn match skullRune "'\(\\'\|\\\"\|.\|\\x\x\x\|\\[\\ertn0]\)'" contains=skullEscape,skullHexEscape,skullQuoteEscape
+syn match skullQuoteEscape "\v(\\\"|\\\')" contained
+syn match skullRune "\v'(\\'|\\\"|.|\\x\x\x|\\[\\ertn0])'" contains=skullEscape,skullHexEscape,skullQuoteEscape
 syn region skullString start=+"+ end=+"+ contains=skullEscape,skullHexEscape,skullQuoteEscape
 syn keyword skullStorageSpecifier external export
 
