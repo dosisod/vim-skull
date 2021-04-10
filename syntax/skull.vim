@@ -4,7 +4,7 @@ endif
 
 syn match skullComment "\v#( .*)?$" contains=skullTodo
 syn region skullBlockComment start="#{" end="#}" contains=skullTodo
-syn match skullTodo "\v(TODO|FIXME|HACK|XXX)((.*))?" contained
+syn match skullTodo "\(TODO\|FIXME\|HACK\|XXX\)\((.*)\)\?" contained
 syn keyword skullConditional if elif else while
 syn keyword skullBoolOperator not is isnt and or xor
 syn keyword skullOperator mod
