@@ -19,9 +19,9 @@ syn match skullNumberOctal "\v<0o([0-7]_?)*[0-7]>"
 syn match skullFloat "\<\([0-7]_\?\)*[0-7]\.\d\+\>"
 syn keyword skullInfinity Infinity
 syn match skullEscape "\v\\[\\etrn0]" contained
-syn match skullHexEscape "\\x\x\{1,8\}" contained
+syn match skullHexEscape "\v\\x\x{1,8}" contained
 syn match skullQuoteEscape "\v(\\\"|\\\')" contained
-syn match skullRune "\v'(\\'|\\\"|.|\\x\x\x|\\[\\ertn0])'" contains=skullEscape,skullHexEscape,skullQuoteEscape
+syn match skullRune "\v'(\\'|\\\"|.|\\x\x{1,8}|\\[\\ertn0])'" contains=skullEscape,skullHexEscape,skullQuoteEscape
 syn region skullString start=+"+ end=+"+ contains=skullEscape,skullHexEscape,skullQuoteEscape
 syn keyword skullStorageSpecifier external export
 
