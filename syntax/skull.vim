@@ -17,7 +17,7 @@ syn match skullNumberHex "\v<0x([0-9A-Fa-f]_?)*[0-9A-Fa-f]>"
 syn match skullNumberBinary "\v<0b([01]_?)*[01]>"
 syn match skullNumberOctal "\v<0o([0-7]_?)*[0-7]>"
 syn match skullFloat "\<\([0-7]_\?\)*[0-7]\.\d\+\>"
-syn keyword skullInfinity Infinity
+syn keyword skullNumber Infinity NaN
 syn match skullEscape "\v\\[\\etrn0]" contained
 syn match skullHexEscape "\v\\x\x{1,8}" contained
 syn match skullQuoteEscape "\v(\\\"|\\\')" contained
@@ -40,7 +40,7 @@ hi link skullNumberHex Number
 hi link skullNumberOctal Number
 hi link skullNumberBinary Number
 hi link skullFloat Number
-hi link skullInfinity Number
+hi link skullNumber Number
 hi link skullString String
 hi link skullRune String
 hi link skullEscape Special
