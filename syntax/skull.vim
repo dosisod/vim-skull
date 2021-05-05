@@ -9,7 +9,7 @@ syn keyword skullConditional if elif else while
 syn keyword skullBoolOperator not is isnt and or xor
 syn keyword skullOperator mod
 syn keyword skullConstant true false
-syn keyword skullStatement return unreachable
+syn keyword skullStatement return unreachable noop
 syn keyword skullType Int Float Rune Str Bool
 syn keyword skullModifier mut
 syn match skullNumber "\v<([0-9]_?)*[0-9]>"
