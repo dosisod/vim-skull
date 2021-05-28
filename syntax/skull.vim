@@ -47,3 +47,5 @@ hi link skullEscape Special
 hi link skullHexEscape Special
 hi link skullQuoteEscape Special
 hi link skullStorageSpecifier StorageClass
+
+let b:current_syntax = "skull"
