@@ -2,7 +2,7 @@ if exists("b:current_syntax")
   finish
 endif
 
-syn match skullComment "\v#( .*)?$" contains=skullTodo
+syn match skullComment "\v#([ \t].*)?$" contains=skullTodo
 syn region skullBlockComment start="#{" end="#}" contains=skullTodo
 syn match skullTodo "\(TODO\|FIXME\|HACK\|XXX\)\((.*)\)\?" contained
 syn keyword skullConditional if elif else while
