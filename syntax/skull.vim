@@ -9,7 +9,7 @@ syn keyword skullConditional if elif else while
 syn keyword skullBoolOperator not is isnt and or xor
 syn keyword skullOperator mod
 syn keyword skullConstant true false
-syn keyword skullStatement return unreachable noop
+syn keyword skullStatement return unreachable noop break continue
 syn keyword skullType Int Float Rune Str Bool
 syn keyword skullModifier mut
 syn match skullNumber "\v<([0-9]_?)*[0-9]>"
@@ -47,5 +47,7 @@ hi link skullEscape Special
 hi link skullHexEscape Special
 hi link skullQuoteEscape Special
 hi link skullStorageSpecifier StorageClass
+
+set commentstring=#\ %s
 
 let b:current_syntax = "skull"
