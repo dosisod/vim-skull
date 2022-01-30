@@ -24,6 +24,7 @@ syn match skullQuoteEscape "\v(\\\"|\\\')" contained
 syn match skullRune "\v'(\\'|\\\"|.|\\x\x{1,8}|\\[\\ertn0])'" contains=skullEscape,skullHexEscape,skullQuoteEscape
 syn region skullString start=+"+ end=+"+ contains=skullEscape,skullHexEscape,skullQuoteEscape
 syn keyword skullStorageSpecifier external export
+syn keyword skullImport import
 
 hi link skullComment Comment
 hi link skullBlockComment Comment
@@ -47,6 +48,7 @@ hi link skullEscape Special
 hi link skullHexEscape Special
 hi link skullQuoteEscape Special
 hi link skullStorageSpecifier StorageClass
+hi link skullImport Include
 
 set commentstring=#\ %s
 
